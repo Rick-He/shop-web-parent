@@ -8,6 +8,7 @@
         <module>shop-web-pojo</module>
         <module>shop-web-eureka</module>
         <module>shop-web-gateway</module>
+        <module>shop-web-service</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
