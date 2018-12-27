@@ -2,6 +2,12 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
+    <packaging>pom</packaging>
+    <modules>
+        <module>shop-web-common</module>
+        <module>shop-web-pojo</module>
+        <module>shop-web-eureka</module>
+    </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
@@ -25,7 +31,7 @@
         <mysql.version>5.1.46</mysql.version>
         <pageHelper.starter.version>1.2.3</pageHelper.starter.version>
         <lombok.version>1.16.20</lombok.version>
-        <fastjson.version>1.2.9</fastjson.version>
+        <fastjson.version>1.2.31</fastjson.version>
         <mapper.version>3.5.2</mapper.version>
         <jjwt.version>0.7.0</jjwt.version>
         <joda-time.version>2.9.7</joda-time.version>
