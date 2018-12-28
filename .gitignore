@@ -31,5 +31,13 @@
 *.iml
 out
 gen
-
 /shop-web-common/src/main/java/com.czxy.common/SmsUtil.java
+shop-web-common/src/main/resources/
+shop-web-common/src/test/
+shop-web-common/target/
+shop-web-eureka/src/test/
+shop-web-gateway/src/test/
+shop-web-pojo/src/main/resources/
+shop-web-pojo/src/test/
+shop-web-pojo/target/
+shop-web-service/src/test/
