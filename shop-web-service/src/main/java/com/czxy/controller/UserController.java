@@ -1,6 +1,9 @@
 package com.czxy.controller;
 
 
+import com.aliyuncs.exceptions.ClientException;
+import com.czxy.common.GetRandomCodeUtil;
+import com.czxy.common.SmsUtil;
 import com.czxy.pojo.User;
 import com.czxy.service.UserService;
 import com.czxy.vo.BaseResult;
@@ -17,6 +20,8 @@ public class UserController {
 
     @Autowired
     private UserService userService;
+
+
 
     /**
      * 接口方式 POST
@@ -35,4 +40,25 @@ public class UserController {
         return ResponseEntity.ok(baseResult);
     }
 
+
+    /**
+     * 接口
+     * POST /web-service/sms
+     * 接收 手机号码
+     * @return
+     */
+    @PostMapping("/sms")
+    public ResponseEntity<Object> sms(@RequestBody User user) throws ClientException {
+
+        //1 收到手机号码
+        String mobile = user.getMobile();
+        //2 调用工具类生成验证码
+        String code = GetRandomCodeUtil.randomCode();
+        //3 调用工具类发送短信
+        SmsUtil.sendSms(mobile,code);
+
+
+
+        return null;
+    }
 }
